@@ -1,0 +1,6 @@
+<% @posts.each do |post| %>
+  <%= post.title %>
+  Authored by <%= post.authors.pluck(:full_name).to_sentence %>
+  <%= link_to "Show", post %>
+  <br/>
+<% end %>
