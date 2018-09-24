@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.where(category: params[:category])
+    @posts = Post.where(domain: params[:domain])
   end
 
   def show
-    @post = Post.find_by(category: params[:category], slug: params[:slug])
+    @post = Post.find_by(domain: params[:domain], slug: params[:slug])
   end
 end

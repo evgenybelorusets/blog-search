@@ -1,5 +1,5 @@
 module ApplicationHelper
   def post_path(post)
-    "#{post.category}/#{post.slug}"
+    "#{post.domain}/#{post.slug}"
   end
 end
