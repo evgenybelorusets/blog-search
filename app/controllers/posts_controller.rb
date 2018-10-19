@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.where(domain: params[:domain])
+    if params[:search]
+      @posts = Post.search(params[:search])
+    else
+      @posts = Post.where(domain: params[:domain])
+    end
   end
 
   def show
